@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default {
-  baseURL: 'http://pokeapi.co/api/v2/',
+  baseURL: 'https://pokeapi.co/api/v2/',
   headers: {
     Accept: 'application/json',
   },
