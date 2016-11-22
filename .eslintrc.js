@@ -1,5 +1,9 @@
 module.exports = {
   root: true,
+  globals: {
+    window: true,
+    document: true,
+  },
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module'

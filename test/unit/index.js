@@ -1,6 +1,7 @@
+import 'babel-polyfill';// eslint-disable-line import/no-extraneous-dependencies
 // Polyfill fn.bind() for PhantomJS
 /* eslint-disable no-extend-native */
-Function.prototype.bind = require('function-bind');
+Function.prototype.bind = require('function-bind'); // eslint-disable-line import/no-extraneous-dependencies
 
 // require all test files (files that ends with .spec.js)
 const testsContext = require.context('./specs', true, /\.spec$/);
