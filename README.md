@@ -28,7 +28,7 @@ yarn run dev
 yarn run build
 
 # run unit tests
-npm run unit
+yarn run unit
 
 # run e2e tests
 npm run e2e
@@ -37,4 +37,28 @@ npm run e2e
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+##Test Environment Issues
+
+### Import babel-polyfill for unit test 
+
+#### Description
+When i run my unit test i receive this error:
+
+`Error: [vuex] vuex requires a Promise polyfill in this browser.`
+
+#### Solution
+
+install `babelpolyfill`
+
+`yarn add babel-polyfill -D`
+
+add polyfill to unit folder
+
+`test/unit/index.js`
+
+```
+import 'babel-polyfill';// eslint-disable-line import/no-extraneous-dependencies
+// Polyfill fn.bind() for PhantomJS
+/* eslint-disable no-extend-native */
+Function.prototype.bind = require('function-bind'); // eslint-disable-line import/no-extraneous-dependencies
+```

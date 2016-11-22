@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> Pokemon Types </h1>
+    <h1>Pokemon Types</h1>
     <PokemonTypesList></PokemonTypesList>
   </div>
 </template>
